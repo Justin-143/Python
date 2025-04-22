@@ -1,0 +1,15 @@
+a=[{"name":"raju","age":23,"marks":[45,50,40,60]},
+    {"name":"rose","age":12,"marks":[75,85,80,90]},
+     {"name":"ravi","age":53,"marks":[65,70,60,80]},
+      {"name":"jack","age":22,"marks":[55,75,65,70]},
+      ]
+for i in range(len(a)):
+    total = sum(a[i]["marks"])
+    percentage = (total / (len(a[i]["marks"]) * 100)) * 100
+    a[i]["percentage"] = percentage
+a.sort(key=lambda x: x["percentage"], reverse=True)
+l=["FIRST","SECOND","THIRD","FOURTH"]
+pos=0
+for j in a:
+    print(f"{j['name']}, has scored {j['percentage']}%--------> stands {l[pos]}")
+    pos=pos+1
