@@ -1,0 +1,25 @@
+b_name=input("Enter boy name: ")
+g_name=input("Enter girl name: ")
+l1=list(b_name)
+l2=list(g_name)
+for i in range(len(l1)):
+    for j in range(len(l2)):
+        if l1[i]==l2[j]:
+            l1[i]='2'
+            l2[j]='2'
+print(l1)
+print(l2)
+
+x=sum(1 for i in l1 if i!='2')
+y=sum(1 for i in l2 if i!='2')
+
+print(x)
+print(y)
+count=x+y
+
+i=0
+a=['F','L','A','M','E','S']
+while len(a) > 1:
+    i = (i + (count-1)) % len(a)
+    a.pop(i)
+print(a)
