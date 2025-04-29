@@ -1,0 +1,18 @@
+import heapq
+el=[20,30,3,45,6,78,9,2]
+min_heap=[]
+max_heap=[]
+
+for i in el:
+    heapq.heappush(min_heap,i)
+print(min_heap)
+#USING THE HEAPPOP WE CAN PRINT THE MINIMUM VALUE OF THE HEAP.
+while min_heap:
+    print(heapq.heappop(min_heap),end=" ")
+print()
+
+for i in el:
+    heapq.heappush(max_heap,-i)
+print(max_heap)
+while(max_heap):
+    print(-heapq.heappop(max_heap),end=" ")
