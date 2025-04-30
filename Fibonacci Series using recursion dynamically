@@ -1,0 +1,17 @@
+def fibonacci(n, m):
+    if n in m:
+        return m[n]
+    if n <= 1:
+        return n
+    m[n] = fibonacci(n - 1, m) + fibonacci(n - 2, m)
+    return m[n]
+
+def Fibonacci_Series():
+    n = int(input("Enter the number of terms: "))
+    m = {}
+    print("Fibonacci Series:")
+    for i in range(n):
+        print(fibonacci(i, m), end=" ")
+    print()
+
+Fibonacci_Series()
