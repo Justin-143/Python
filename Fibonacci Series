@@ -1,0 +1,13 @@
+def fibonacci_recursive(n):
+    if n <= 1:
+        return n
+    return fibonacci_recursive(n - 1) + fibonacci_recursive(n - 2)
+
+def Fibonacci_Series():
+    n = int(input("Enter the number of terms: "))
+    print("Fibonacci Series:")
+    for i in range(n):
+        print(fibonacci_recursive(i), end=" ")
+    print()
+
+Fibonacci_Series()
